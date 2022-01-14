@@ -12,6 +12,12 @@ function reducer(state, action) {
   switch (action.type) {
     case "numberAdd2":
       return { ...state, number: state.number + 2 };
+    case "numberMulti7":
+      return { ...state, number: state.number * 7 };
+    case "numberDiv25":
+      return { ...state, number: state.number / 25 };
+    case "numberInt":
+      return { ...state, number: parseInt(state.number) };
     case "login":
       return { ...state, user: { name: action.payload } };
     default:
@@ -37,11 +43,35 @@ const UseReducer = (props) => {
         <span className="text">{state.number}</span>
 
         <div>
-          <button className="btn" onClick={(_) => dispatch({ type: "login", payload: 'Maria' })}>
+          <button
+            className="btn"
+            onClick={(_) => dispatch({ type: "login", payload: "Maria" })}
+          >
             Login
           </button>
-          <button className="btn" onClick={(_) => dispatch({ type: "numberAdd2" })}>
+          <button
+            className="btn"
+            onClick={(_) => dispatch({ type: "numberAdd2" })}
+          >
             +2
+          </button>
+          <button
+            className="btn"
+            onClick={(_) => dispatch({ type: "numberMulti7" })}
+          >
+            x*7
+          </button>
+          <button
+            className="btn"
+            onClick={(_) => dispatch({ type: "numberDiv25" })}
+          >
+            x/25
+          </button>
+          <button
+            className="btn"
+            onClick={(_) => dispatch({ type: "numberInt" })}
+          >
+            toInt
           </button>
         </div>
       </div>
