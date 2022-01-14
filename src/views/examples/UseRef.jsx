@@ -2,15 +2,31 @@ import React, { useState, useRef, useEffect } from "react";
 import PageTitle from "../../components/layout/PageTitle";
 import SectionTitle from "../../components/layout/SectionTitle";
 
+const merge = function (s1, s2) {
+    return [...s1].map((e, i)=> `${e}${s2[i] || ""}`).join("");
+};
+
 const UseRef = (props) => {
-
   const [value1, setValue1] = useState("");
-  const count = useRef(0) //.current
+  const [value2, setValue2] = useState("");
+  const count = useRef(0); //.current
+  const myInput1 = useRef(null); //.current
+  const myInput2 = useRef(null); //.current
 
-
-  useEffect(function(){
-      count.current = count.current+1
-  }, [value1])
+  useEffect(
+    function () {
+      count.current++;
+      myInput2.current.focus();
+    },
+    [value1]
+  );
+  useEffect(
+    function () {
+      count.current++;
+      myInput1.current.focus();
+    },
+    [value2]
+  );
 
   return (
     <div className="UseRef">
@@ -21,16 +37,27 @@ const UseRef = (props) => {
       <SectionTitle title="Exercício #01" />
       <div>
         <span className="text">Value:</span>
-        <span className="text"> {value1} [</span>
+        <span className="text"> {merge(value1, value2)} [</span>
         <span className="text red">{count.current}</span>
         <span className="text">]</span>
-        </div>
+      </div>
       <div className="center">
         <input
           type="text"
           className="input"
+          ref={myInput1}
           value={value1}
           onChange={(e) => setValue1(e.target.value)}
+        />
+      </div>
+      <SectionTitle title="Exercício #02" />
+      <div className="center">
+        <input
+          type="text"
+          className="input"
+          ref={myInput2}
+          value={value2}
+          onChange={(e) => setValue2(e.target.value)}
         />
       </div>
     </div>
