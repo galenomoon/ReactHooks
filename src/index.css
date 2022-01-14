@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    
 }
 
 .text {
@@ -15,8 +16,10 @@ body {
 
 .input {
     font-weight: 300;
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 20px 0px;
+    width: 80%;
+    display:flex;
 }
 
 .btn {

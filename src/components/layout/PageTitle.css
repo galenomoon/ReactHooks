@@ -3,17 +3,20 @@
     padding: 15px;
     background: #006c9025;
     margin-bottom: 40px;
+    
 }
 
 .PageTitle h1 {
     margin: 0;
     font-weight: 400;
+    
 }
 
 .PageTitle h2 {
     margin-top: 5px;
     margin-bottom: 0px;
     font-weight: 300;
+    
 }
 
 .PageTitle.error{
