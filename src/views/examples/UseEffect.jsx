@@ -38,11 +38,10 @@ const UseEffect = (props) => {
 
   useEffect(
     function () {
-      setStatus(number2 % 2 === 0 ? 'Par' : 'Ímpar')      
+      setStatus(number2 % 2 === 0 ? "Par" : "Ímpar");
     },
     [number2]
   );
-  
 
   return (
     <div className="UseEffect">
@@ -82,7 +81,6 @@ const UseEffect = (props) => {
       </div>
     </div>
   );
-  
 };
 
 export default UseEffect;

@@ -22,16 +22,10 @@ const UseReducer = (props) => {
         <span className="text">{state.number}</span>
 
         <div>
-          <button
-            className="btn"
-            onClick={(_) => login(dispatch, 'João')}
-          >
+          <button className="btn" onClick={(_) => login(dispatch, "João")}>
             Login
           </button>
-          <button
-            className="btn"
-            onClick={(_) => numberAdd2(dispatch)}
-          >
+          <button className="btn" onClick={(_) => numberAdd2(dispatch)}>
             +2
           </button>
           <button

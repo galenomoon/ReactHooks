@@ -1,13 +1,13 @@
 .SectionTitle {
-    border-bottom: 3px solid #006c90;
-    display:flex;
+  border-bottom: 3px solid #006c90;
+  display: flex;
 }
 
 .SectionTitle h3 {
-    display:flex;
-    
-    margin: 0;
-    margin-bottom: 5px;
-    font-size: 2rem;
-    font-weight: 400;
+  display: flex;
+
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 2rem;
+  font-weight: 400;
 }

@@ -16,4 +16,4 @@ const UseCallbackButtons = (props) => {
   );
 };
 // export default UseCallbackButtons;
-export default React.memo(UseCallbackButtons)
+export default React.memo(UseCallbackButtons);
